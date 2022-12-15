@@ -1,6 +1,6 @@
-const express = require("express")
-const mongoose = require("mongoose")
-const cors = require("cors")
+import express = require("express")
+import mongoose = require("mongoose")
+import cors = require("cors")
 
 const app = express()
 
@@ -18,6 +18,6 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 app.get('/' , async (req: Request,res:Response) => {
-  res.json()
+  console.log("were here")
 })
 app.listen(3000, () => console.log("were live"))
